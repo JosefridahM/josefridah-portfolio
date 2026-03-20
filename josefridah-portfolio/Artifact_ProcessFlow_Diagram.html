@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Process Flow Diagram — Insurance Underwriting</title>
+<style>
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f8f9fa;padding:2rem;color:#1a1a2e}
+  .header{background:#16213E;color:#fff;padding:2rem 2.5rem;border-radius:12px;margin-bottom:2rem}
+  .header h1{font-size:1.6rem;margin-bottom:.3rem}
+  .header p{color:rgba(255,255,255,.6);font-size:.9rem}
+  .meta{display:flex;gap:2rem;margin-top:1rem;font-size:.8rem;color:rgba(255,255,255,.5)}
+  .meta strong{color:rgba(255,255,255,.8)}
+  .diagram-wrap{background:#fff;border-radius:12px;padding:1.5rem;margin-bottom:2rem;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .diagram-title{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:#E94560;text-transform:uppercase;margin-bottom:1rem}
+  .legend{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1rem 0 0;font-size:.8rem;color:#6c757d}
+  .legend-item{display:flex;align-items:center;gap:.4rem}
+  .legend-dot{width:14px;height:14px;border-radius:3px}
+  .note{background:#e8f4f8;border-left:4px solid #0F3460;padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.88rem;color:#0F3460;margin-bottom:1.5rem}
+  .fill-guide{background:#fff3cd;border:1px solid #f5a623;border-radius:8px;padding:1.25rem;margin-top:2rem;font-size:.88rem}
+  .fill-guide h4{color:#7a4f00;margin-bottom:.5rem}
+  .fill-guide ul{padding-left:1.25rem;line-height:2;color:#5a3c00}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Process Flow Diagram</h1>
+  <p>Insurance Underwriting — As-Is vs To-Be Process · Kenyan Alliance Insurance</p>
+  <div class="meta">
+    <span><strong>Author:</strong> Josefridah M. Mutua, BA/TPM</span>
+    <span><strong>Version:</strong> 1.0</span>
+    <span><strong>Status:</strong> Template — fill in with project details</span>
+    <span><strong>Tool:</strong> HTML/SVG (editable)</span>
+  </div>
+</div>
+
+<div class="note">
+  📌 <strong>How to use this template:</strong> Replace the swim-lane labels, step names, and decision points with your project's actual process. The As-Is diagram shows the current state (the problem), the To-Be shows the solution. Use this in your portfolio to demonstrate your BA process mapping skills.
+</div>
+
+<!-- AS-IS DIAGRAM -->
+<div class="diagram-wrap">
+  <div class="diagram-title">As-Is Process — Manual Underwriting (10-Day Turnaround)</div>
+  <svg width="100%" viewBox="0 0 860 520" style="display:block">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="#6c757d" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+      <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="#E94560" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+
+    <!-- Swim lane backgrounds -->
+    <rect x="0" y="40" width="860" height="90" fill="#f0f4ff" rx="0"/>
+    <rect x="0" y="130" width="860" height="90" fill="#fff8f0" rx="0"/>
+    <rect x="0" y="220" width="860" height="90" fill="#f0fff4" rx="0"/>
+    <rect x="0" y="310" width="860" height="90" fill="#fff0f0" rx="0"/>
+    <rect x="0" y="400" width="860" height="90" fill="#f8f0ff" rx="0"/>
+
+    <!-- Lane labels -->
+    <rect x="0" y="40" width="110" height="450" fill="#16213E" rx="0"/>
+    <text transform="rotate(-90,55,260)" x="0" y="0" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)">Customer</text>
+    <text transform="rotate(-90,55,175)" x="0" y="0" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)">Sales Agent</text>
+    <text transform="rotate(-90,55,265)" x="0" y="0" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)">Underwriter</text>
+    <text transform="rotate(-90,55,355)" x="0" y="0" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)">Manager</text>
+    <text transform="rotate(-90,55,445)" x="0" y="0" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)">Finance</text>
+
+    <!-- ROW 1: Customer -->
+    <rect x="130" y="55" width="120" height="56" rx="6" fill="#C3CFE8" stroke="#7B97D4" stroke-width="0.8"/>
+    <text x="190" y="78" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1a1a2e">Submit</text>
+    <text x="190" y="93" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">paper form</text>
+
+    <!-- ROW 2: Sales Agent -->
+    <rect x="280" y="145" width="120" height="56" rx="6" fill="#FFD9A8" stroke="#E8993A" stroke-width="0.8"/>
+    <text x="340" y="168" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1a1a2e">Log in</text>
+    <text x="340" y="183" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">spreadsheet</text>
+
+    <rect x="440" y="145" width="120" height="56" rx="6" fill="#FFD9A8" stroke="#E8993A" stroke-width="0.8"/>
+    <text x="500" y="168" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1a1a2e">Email to</text>
+    <text x="500" y="183" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">underwriter</text>
+
+    <!-- ROW 3: Underwriter -->
+    <rect x="590" y="235" width="120" height="56" rx="6" fill="#B8E8C8" stroke="#3DAA6A" stroke-width="0.8"/>
+    <text x="650" y="258" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1a1a2e">Manual risk</text>
+    <text x="650" y="273" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">assessment</text>
+
+    <!-- Decision diamond -->
+    <polygon points="730,310 760,335 730,360 700,335" fill="#fff3cd" stroke="#f5a623" stroke-width="1"/>
+    <text x="730" y="332" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#7a4f00">Approve</text>
+    <text x="730" y="345" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a4f00">?</text>
+
+    <!-- ROW 4: Manager approval -->
+    <rect x="590" y="320" width="100" height="50" rx="6" fill="#FFBCBC" stroke="#E94560" stroke-width="0.8"/>
+    <text x="640" y="343" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#7a0000">Manual</text>
+    <text x="640" y="358" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a0000">approval</text>
+
+    <!-- ROW 5: Finance -->
+    <rect x="740" y="415" width="100" height="50" rx="6" fill="#E8D5FF" stroke="#9B59B6" stroke-width="0.8"/>
+    <text x="790" y="438" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#4a0080">Issue</text>
+    <text x="790" y="453" text-anchor="middle" font-family="Arial" font-size="10" fill="#4a0080">policy</text>
+
+    <!-- BOTTLENECK callout -->
+    <rect x="420" y="240" width="140" height="40" rx="6" fill="#E94560" opacity="0.9"/>
+    <text x="490" y="257" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#fff">⚠ 3–5 day wait</text>
+    <text x="490" y="271" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.85)">emails get lost</text>
+
+    <rect x="120" y="315" width="140" height="40" rx="6" fill="#E94560" opacity="0.9"/>
+    <text x="190" y="332" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#fff">⚠ 2–3 day backlog</text>
+    <text x="190" y="346" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.85)">200+ cases/week</text>
+
+    <!-- Arrows -->
+    <line x1="190" y1="111" x2="310" y2="145" stroke="#6c757d" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+    <line x1="400" y1="173" x2="440" y2="173" stroke="#6c757d" stroke-width="1.2" marker-end="url(#arr)"/>
+    <line x1="500" y1="201" x2="620" y2="235" stroke="#6c757d" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+    <line x1="710" y1="263" x2="762" y2="310" stroke="#6c757d" stroke-width="1.2" marker-end="url(#arr)"/>
+    <line x1="700" y1="335" x2="690" y2="335" stroke="#E94560" stroke-width="1.2" marker-end="url(#arr-red)"/>
+    <line x1="760" y1="360" x2="790" y2="415" stroke="#6c757d" stroke-width="1.2" marker-end="url(#arr)"/>
+
+    <!-- Total time label -->
+    <rect x="10" y="460" width="840" height="50" rx="6" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+    <text x="430" y="481" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#7a4f00">Total end-to-end time: 8–10 business days</text>
+    <text x="430" y="498" text-anchor="middle" font-family="Arial" font-size="11" fill="#7a4f00">Pain points: Manual data entry · Lost emails · No real-time visibility · Manager bottleneck · No audit trail</text>
+  </svg>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#C3CFE8"></div>Customer action</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#FFD9A8"></div>Agent action</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#B8E8C8"></div>Underwriter action</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#FFBCBC"></div>Manager review</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#E94560"></div>Bottleneck / Pain point</div>
+  </div>
+</div>
+
+<!-- TO-BE DIAGRAM -->
+<div class="diagram-wrap">
+  <div class="diagram-title">To-Be Process — Automated Workflow (2-Day Turnaround)</div>
+  <svg width="100%" viewBox="0 0 860 440" style="display:block">
+    <defs>
+      <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="#06D6A0" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="860" height="440" fill="#f0fff8" rx="8"/>
+    <rect x="10" y="10" width="840" height="420" fill="none" stroke="#06D6A0" stroke-width="1" rx="6" stroke-dasharray="6,4"/>
+
+    <!-- Steps left to right -->
+    <!-- Step 1 -->
+    <rect x="30" y="160" width="110" height="60" rx="8" fill="#0F3460" stroke="none"/>
+    <text x="85" y="185" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">Customer</text>
+    <text x="85" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.8)">Online portal</text>
+    <text x="85" y="213" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.8)">submission</text>
+
+    <!-- Step 2 -->
+    <rect x="180" y="160" width="110" height="60" rx="8" fill="#06D6A0" stroke="none"/>
+    <text x="235" y="185" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#04342C">Auto</text>
+    <text x="235" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">validation</text>
+    <text x="235" y="213" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">&amp; data check</text>
+
+    <!-- Step 3 -->
+    <rect x="330" y="160" width="110" height="60" rx="8" fill="#06D6A0" stroke="none"/>
+    <text x="385" y="185" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#04342C">Rules engine</text>
+    <text x="385" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">risk scoring</text>
+    <text x="385" y="213" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">(automated)</text>
+
+    <!-- Decision -->
+    <polygon points="510,190 540,220 510,250 480,220" fill="#fff3cd" stroke="#f5a623" stroke-width="1.2"/>
+    <text x="510" y="217" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#7a4f00">Risk</text>
+    <text x="510" y="230" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a4f00">level?</text>
+
+    <!-- Low risk path -->
+    <rect x="560" y="100" width="110" height="55" rx="8" fill="#06D6A0"/>
+    <text x="615" y="123" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#04342C">Auto-approve</text>
+    <text x="615" y="138" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">Low risk</text>
+    <text x="615" y="150" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">policy issued</text>
+
+    <!-- High risk path -->
+    <rect x="560" y="285" width="110" height="55" rx="8" fill="#FFD9A8" stroke="#E8993A" stroke-width="0.8"/>
+    <text x="615" y="308" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1a1a2e">Flagged for</text>
+    <text x="615" y="323" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">manual review</text>
+    <text x="615" y="336" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">(high risk only)</text>
+
+    <!-- Final step -->
+    <rect x="720" y="160" width="110" height="60" rx="8" fill="#0F3460"/>
+    <text x="775" y="183" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">Policy issued</text>
+    <text x="775" y="198" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.8)">+ SMS/Email</text>
+    <text x="775" y="213" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.8)">notification</text>
+
+    <!-- Arrows -->
+    <line x1="140" y1="190" x2="178" y2="190" stroke="#06D6A0" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="290" y1="190" x2="328" y2="190" stroke="#06D6A0" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="440" y1="190" x2="478" y2="210" stroke="#06D6A0" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="540" y1="205" x2="562" y2="148" stroke="#06D6A0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+    <text x="547" y="175" font-family="Arial" font-size="9" fill="#06873f">Low</text>
+    <line x1="540" y1="234" x2="562" y2="310" stroke="#E8993A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+    <text x="543" y="278" font-family="Arial" font-size="9" fill="#E8993A">High</text>
+    <line x1="670" y1="127" x2="720" y2="175" stroke="#06D6A0" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <line x1="670" y1="312" x2="720" y2="205" stroke="#E8993A" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+    <!-- Time callout -->
+    <rect x="30" y="260" width="140" height="45" rx="8" fill="#06D6A0" opacity="0.15" stroke="#06D6A0" stroke-width="1"/>
+    <text x="100" y="279" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#04342C">Auto-submit saves</text>
+    <text x="100" y="293" text-anchor="middle" font-family="Arial" font-size="10" fill="#04342C">3 days vs. paper</text>
+
+    <!-- Total time label -->
+    <rect x="30" y="370" width="800" height="50" rx="6" fill="#06D6A0" opacity="0.15" stroke="#06D6A0" stroke-width="1"/>
+    <text x="430" y="391" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#04342C">Total end-to-end time: 1–2 business days (80% improvement)</text>
+    <text x="430" y="408" text-anchor="middle" font-family="Arial" font-size="11" fill="#04342C">Automated validation · Rules-based risk scoring · Real-time notifications · Full audit trail · Exceptions only escalated</text>
+  </svg>
+</div>
+
+<div class="fill-guide">
+  <h4>📝 How to personalise this diagram for your project</h4>
+  <ul>
+    <li>Replace "Customer", "Sales Agent", "Underwriter" swim lanes with your project's actual actors</li>
+    <li>Update step names to match your actual process (e.g. "Online portal submission" → your system name)</li>
+    <li>Change the time labels ("10-day", "2-day") to reflect your project's actual improvement</li>
+    <li>Add or remove steps to match your real workflow</li>
+    <li>For the Givva Wealthtech project: update to show investor onboarding, KYC, asset manager API integration flow</li>
+    <li>Export this HTML to PNG using browser print → "Save as PDF" for your portfolio PDF</li>
+  </ul>
+</div>
+
+<div style="margin-top:1.5rem;font-size:.8rem;color:#6c757d;text-align:center">
+  Process Flow Diagram Template · Josefridah M. Mutua · josefridahmwende71@gmail.com
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Requirements Specification — Template</title>
+<style>
+  body{font-family:'Segoe UI',Arial,sans-serif;max-width:900px;margin:0 auto;padding:2rem;color:#1a1a2e;line-height:1.7}
+  .cover{background:#16213E;color:#fff;padding:3rem;border-radius:12px;margin-bottom:2rem}
+  .cover h1{font-size:2rem;margin-bottom:.5rem}
+  .cover .sub{color:rgba(255,255,255,.6);font-size:.9rem}
+  .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+  .meta-field{background:rgba(255,255,255,.08);border-radius:8px;padding:.75rem 1rem}
+  .meta-field label{font-size:.72rem;color:rgba(255,255,255,.5);display:block;letter-spacing:.1em;text-transform:uppercase}
+  .meta-field span{font-size:.9rem;color:rgba(255,255,255,.9)}
+  h2{color:#16213E;border-bottom:3px solid #E94560;padding-bottom:.4rem;margin:2.5rem 0 1rem}
+  h3{color:#0F3460;margin:1.5rem 0 .5rem;font-size:1.05rem}
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+  th{background:#16213E;color:#fff;padding:.6rem 1rem;text-align:left;font-size:.8rem;letter-spacing:.06em}
+  td{padding:.6rem 1rem;border-bottom:1px solid #e9ecef}
+  tr:nth-child(even) td{background:#f8f9fa}
+  .fill{background:#fff3cd;border:1px dashed #f5a623;border-radius:4px;padding:.2rem .6rem;font-style:italic;color:#7a4f00;font-size:.85rem}
+  .section-note{background:#e8f4f8;border-left:4px solid #0F3460;padding:1rem;border-radius:0 8px 8px 0;font-size:.88rem;color:#0F3460;margin-bottom:1rem}
+  .req-row td:first-child{font-weight:700;color:#E94560;white-space:nowrap;font-size:.85rem}
+  .priority{display:inline-block;padding:.15rem .5rem;border-radius:10px;font-size:.72rem;font-weight:700}
+  .high{background:#fce4e4;color:#c0392b}
+  .med{background:#fef3cd;color:#7a4f00}
+  .low{background:#e8f8ef;color:#1a6f40}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e9ecef;font-size:.8rem;color:#6c757d;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>System Requirements Specification</h1>
+  <div class="sub">SRS Document · Version 1.0 · Confidential</div>
+  <div class="meta-grid">
+    <div class="meta-field"><label>Project Name</label><span class="fill">[Enter project name]</span></div>
+    <div class="meta-field"><label>Client / Organisation</label><span class="fill">[Enter organisation]</span></div>
+    <div class="meta-field"><label>Document Author</label><span>Josefridah M. Mutua — BA / TPM</span></div>
+    <div class="meta-field"><label>Version</label><span class="fill">[v1.0 · DD MMM YYYY]</span></div>
+    <div class="meta-field"><label>Status</label><span class="fill">[Draft / Under Review / Approved]</span></div>
+    <div class="meta-field"><label>Approved By</label><span class="fill">[Stakeholder name & date]</span></div>
+  </div>
+</div>
+
+<!-- 1 -->
+<h2>1. Introduction</h2>
+<h3>1.1 Purpose</h3>
+<div class="section-note">Describe why this document exists and what it governs. 2–3 sentences.</div>
+<p>This System Requirements Specification defines the functional and non-functional requirements for <span class="fill">[system/product name]</span>. It serves as the agreed baseline between business stakeholders and the development team, and forms the basis for UAT acceptance criteria and project sign-off.</p>
+
+<h3>1.2 Scope</h3>
+<p>This document covers: <span class="fill">[List the modules, features, or integrations in scope]</span>.</p>
+<p><strong>Out of scope:</strong> <span class="fill">[Explicitly list what is NOT covered]</span>.</p>
+
+<h3>1.3 Definitions &amp; Acronyms</h3>
+<table>
+  <tr><th>Term</th><th>Definition</th></tr>
+  <tr><td class="fill">[Term 1]</td><td class="fill">[Definition]</td></tr>
+  <tr><td class="fill">[Term 2]</td><td class="fill">[Definition]</td></tr>
+  <tr><td>SRS</td><td>System Requirements Specification</td></tr>
+  <tr><td>UAT</td><td>User Acceptance Testing</td></tr>
+  <tr><td>API</td><td>Application Programming Interface</td></tr>
+</table>
+
+<!-- 2 -->
+<h2>2. Stakeholder Analysis</h2>
+<table>
+  <tr><th>Stakeholder</th><th>Role</th><th>Interest / Concern</th><th>Involvement</th></tr>
+  <tr><td class="fill">[Name]</td><td class="fill">[Title]</td><td class="fill">[e.g. Budget, compliance]</td><td>Approver</td></tr>
+  <tr><td class="fill">[Name]</td><td class="fill">[Title]</td><td class="fill">[e.g. System usability]</td><td>End User</td></tr>
+  <tr><td class="fill">[Name]</td><td>Development Lead</td><td>Technical feasibility</td><td>Implementer</td></tr>
+  <tr><td>Josefridah M. Mutua</td><td>BA / TPM</td><td>Requirements accuracy, delivery</td><td>Author / Facilitator</td></tr>
+</table>
+
+<!-- 3 -->
+<h2>3. Current State (As-Is Process)</h2>
+<div class="section-note">Describe the current process BEFORE the proposed system. Include pain points, bottlenecks, and the problem being solved. Reference your process flow diagram here.</div>
+<p><span class="fill">[Describe the current manual or existing digital process. e.g. "Currently, underwriting is handled manually via email chains and spreadsheets, resulting in a 10-day turnaround time and a backlog of 200+ cases per week."]</span></p>
+
+<h3>Pain Points Identified</h3>
+<table>
+  <tr><th>#</th><th>Pain Point</th><th>Business Impact</th></tr>
+  <tr><td>P01</td><td class="fill">[e.g. Manual data entry prone to error]</td><td class="fill">[e.g. 15% rework rate, delays]</td></tr>
+  <tr><td>P02</td><td class="fill">[e.g. No visibility on case status]</td><td class="fill">[e.g. Customer complaints]</td></tr>
+  <tr><td>P03</td><td class="fill">[Add pain point]</td><td class="fill">[Add impact]</td></tr>
+</table>
+
+<!-- 4 -->
+<h2>4. Proposed Solution (To-Be)</h2>
+<p><span class="fill">[Describe the proposed system/solution at a high level. How will it address the pain points above?]</span></p>
+
+<h3>4.1 System Architecture Overview</h3>
+<div class="section-note">Insert your system architecture diagram or high-level component diagram here. Reference draw.io or Visio file.</div>
+<p><em>[Insert diagram — see Process Flow Artifact for template]</em></p>
+
+<!-- 5 -->
+<h2>5. Functional Requirements</h2>
+<div class="section-note">Each requirement must have a unique ID, description, priority, and acceptance criterion. These become your UAT test cases.</div>
+
+<h3>5.1 User Authentication &amp; Access Control</h3>
+<table>
+  <tr><th>ID</th><th>Requirement</th><th>Priority</th><th>Acceptance Criterion</th></tr>
+  <tr class="req-row">
+    <td>FR-001</td>
+    <td class="fill">[e.g. The system shall allow users to log in using email and password]</td>
+    <td><span class="priority high">High</span></td>
+    <td class="fill">[e.g. User can log in within 3 seconds; invalid credentials show error message]</td>
+  </tr>
+  <tr class="req-row">
+    <td>FR-002</td>
+    <td class="fill">[e.g. The system shall enforce role-based access control with 3 user levels]</td>
+    <td><span class="priority high">High</span></td>
+    <td class="fill">[e.g. Admin sees all modules; standard user cannot access admin panel]</td>
+  </tr>
+</table>
+
+<h3>5.2 Core Business Process — <span class="fill">[Module Name]</span></h3>
+<table>
+  <tr><th>ID</th><th>Requirement</th><th>Priority</th><th>Acceptance Criterion</th></tr>
+  <tr class="req-row">
+    <td>FR-010</td>
+    <td class="fill">[Describe the main feature/process requirement]</td>
+    <td><span class="priority high">High</span></td>
+    <td class="fill">[How will you verify this in UAT?]</td>
+  </tr>
+  <tr class="req-row">
+    <td>FR-011</td>
+    <td class="fill">[Add requirement]</td>
+    <td><span class="priority med">Medium</span></td>
+    <td class="fill">[Add acceptance criterion]</td>
+  </tr>
+  <tr class="req-row">
+    <td>FR-012</td>
+    <td class="fill">[Add requirement]</td>
+    <td><span class="priority low">Low</span></td>
+    <td class="fill">[Add acceptance criterion]</td>
+  </tr>
+</table>
+
+<h3>5.3 Reporting &amp; Notifications</h3>
+<table>
+  <tr><th>ID</th><th>Requirement</th><th>Priority</th><th>Acceptance Criterion</th></tr>
+  <tr class="req-row">
+    <td>FR-020</td>
+    <td class="fill">[e.g. System shall send email notifications when a case status changes]</td>
+    <td><span class="priority med">Medium</span></td>
+    <td class="fill">[e.g. Email received within 60 seconds of status change]</td>
+  </tr>
+</table>
+
+<!-- 6 -->
+<h2>6. Non-Functional Requirements</h2>
+<table>
+  <tr><th>ID</th><th>Category</th><th>Requirement</th><th>Target Metric</th></tr>
+  <tr><td>NFR-001</td><td>Performance</td><td class="fill">[e.g. System response time]</td><td class="fill">[e.g. &lt;2 seconds for 95% of requests]</td></tr>
+  <tr><td>NFR-002</td><td>Security</td><td class="fill">[e.g. Data encryption at rest and in transit]</td><td class="fill">[e.g. AES-256 encryption; TLS 1.2+]</td></tr>
+  <tr><td>NFR-003</td><td>Availability</td><td class="fill">[e.g. System uptime]</td><td class="fill">[e.g. 99.5% uptime, excluding planned maintenance]</td></tr>
+  <tr><td>NFR-004</td><td>Scalability</td><td class="fill">[e.g. Concurrent users]</td><td class="fill">[e.g. Support 500 concurrent users without degradation]</td></tr>
+  <tr><td>NFR-005</td><td>Compliance</td><td class="fill">[e.g. Regulatory requirement]</td><td class="fill">[e.g. Full CMA compliance; GDPR data handling]</td></tr>
+</table>
+
+<!-- 7 -->
+<h2>7. API Integration Requirements</h2>
+<div class="section-note">Fill this section if your project involves third-party API integrations. Key for fintech and insurance projects.</div>
+<table>
+  <tr><th>Integration</th><th>Type</th><th>Data Exchanged</th><th>Auth Method</th><th>Owner</th></tr>
+  <tr>
+    <td class="fill">[e.g. Asset Manager A]</td>
+    <td>REST API</td>
+    <td class="fill">[e.g. Portfolio data, NAV]</td>
+    <td>OAuth 2.0</td>
+    <td class="fill">[Team responsible]</td>
+  </tr>
+  <tr>
+    <td class="fill">[e.g. Payment Gateway]</td>
+    <td>REST API</td>
+    <td class="fill">[e.g. Transaction status]</td>
+    <td>API Key</td>
+    <td class="fill">[Team responsible]</td>
+  </tr>
+</table>
+
+<!-- 8 -->
+<h2>8. Assumptions &amp; Constraints</h2>
+<h3>Assumptions</h3>
+<ul style="padding-left:1.5rem;line-height:2">
+  <li><span class="fill">[e.g. All users will have stable internet access]</span></li>
+  <li><span class="fill">[e.g. Third-party APIs will maintain 99% uptime]</span></li>
+  <li><span class="fill">[Add assumption]</span></li>
+</ul>
+<h3>Constraints</h3>
+<ul style="padding-left:1.5rem;line-height:2">
+  <li><span class="fill">[e.g. Budget is capped at KES X]</span></li>
+  <li><span class="fill">[e.g. Must go live by DD MMM YYYY due to regulatory deadline]</span></li>
+  <li><span class="fill">[Add constraint]</span></li>
+</ul>
+
+<!-- 9 -->
+<h2>9. Sign-off &amp; Approval</h2>
+<table>
+  <tr><th>Name</th><th>Role</th><th>Signature</th><th>Date</th></tr>
+  <tr><td class="fill">[Sponsor Name]</td><td>Project Sponsor</td><td>_______________</td><td>___________</td></tr>
+  <tr><td class="fill">[Business Lead]</td><td>Business Owner</td><td>_______________</td><td>___________</td></tr>
+  <tr><td>Josefridah M. Mutua</td><td>BA / TPM</td><td>_______________</td><td>___________</td></tr>
+  <tr><td class="fill">[Tech Lead]</td><td>Development Lead</td><td>_______________</td><td>___________</td></tr>
+</table>
+
+<footer>
+  SRS Template · Josefridah M. Mutua · josefridahmwende71@gmail.com · Nairobi, Kenya<br>
+  <span style="color:#E94560">Yellow highlighted fields = fill in with your project details</span>
+</footer>
+</body>
+</html>
