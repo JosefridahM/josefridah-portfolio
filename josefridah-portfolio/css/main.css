@@ -749,6 +749,23 @@ ul {
   color: #7C5CBF;
 }
 
+.role-card[data-color="startup"] .role-icon {
+  color: var(--gold);
+}
+
+.role-card[data-color="startup"]::before {
+  background: var(--gold);
+}
+
+.role-card[data-color="startup"] ul li::before {
+  color: var(--gold);
+}
+
+.role-card[data-color="startup"] .role-link {
+  color: var(--gold);
+}
+
+
 /* ── FEATURED */
 .featured-section {
   padding: 7rem 0;
